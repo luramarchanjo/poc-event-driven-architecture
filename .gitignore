@@ -1,0 +1,30 @@
+.DS_Store
+*target*
+*.versionsBackup
+.project
+.classpath
+bin
+.settings
+*.log
+api-token-management.iml
+
+**/.DS_Store
+**/*.versionsBackup
+**/.project
+**/.classpath
+**/bin
+**/.settings
+**/*.log
+**/.idea
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
