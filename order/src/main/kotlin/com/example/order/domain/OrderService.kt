@@ -23,4 +23,9 @@ class OrderService(val repository: OrderRepository) {
         repository.deleteAll()
     }
 
+    fun updateStatus(order: String, status: OrderStatus) {
+        log.info("Updating status=[$status] order=[$order]")
+        repository.updateStatus(order, status)
+    }
+
 }

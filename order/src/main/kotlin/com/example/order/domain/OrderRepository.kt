@@ -30,4 +30,15 @@ class OrderRepository(val eventSender: EventSender) {
         return orders.clear()
     }
 
+    fun updateStatus(orderId: String, status: OrderStatus) {
+        log.info("Updating status=[$status] order=[$orderId]")
+        val order = orders.get(orderId)
+        if (order != null) {
+            order.status = status
+            orders.put(orderId, order)
+        } else {
+            log.warn("Order=[$orderId] not found")
+        }
+    }
+
 }
